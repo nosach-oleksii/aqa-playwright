@@ -1,6 +1,6 @@
 import { Page, Locator, expect } from "@playwright/test";
 import { BasePage } from "./BasePage";
-import { Sidebar } from "/Sidebar";
+import { Sidebar } from "./Sidebar";
 
 export class GaragePage extends BasePage {
     private readonly _sidebar: Sidebar;
