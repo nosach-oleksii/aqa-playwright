@@ -3,6 +3,8 @@ import { BasePage } from "./BasePage";
 
 export class HomePage extends BasePage {
     private readonly _signUpButton: Locator;
+    private readonly _signInButton: Locator;
+    private readonly _logInForm: Locator;
     private readonly _registrationForm: Locator;
     private readonly _closeButton: Locator;
     private readonly _nameField: Locator;
@@ -11,11 +13,16 @@ export class HomePage extends BasePage {
     private readonly _passwordField: Locator;
     private readonly _repeatPasswordField: Locator;
     private readonly _registrationButton: Locator;
+    private readonly _logInButton: Locator;
+    private readonly _emailFieldLogin: Locator;
+    private readonly _passwordFieldLogin: Locator;
 
     constructor(page: Page) {
         super(page);
         this._signUpButton = this.page.getByRole("button", { name: "Sign Up" });
+        this._signInButton = this.page.getByRole("button", { name: "Sign In" });
         this._registrationForm = this.page.locator("div.modal-content");
+        this._logInForm = this.page.locator("app-signin-modal");
         this._nameField = this._registrationForm.locator("#signupName");
         this._lastNameField = this._registrationForm.locator("#signupLastName");
         this._emailField = this._registrationForm.locator("#signupEmail");
@@ -23,6 +30,9 @@ export class HomePage extends BasePage {
         this._repeatPasswordField = this._registrationForm.locator("#signupRepeatPassword");
         this._registrationButton = this._registrationForm.getByRole("button", { name: "Register" });
         this._closeButton = this._registrationForm.getByRole("button", { name: "Close" });
+        this._logInButton = this._logInForm.getByRole("button", { name: "Login" });
+        this._emailFieldLogin = this._logInForm.locator("#signinEmail");
+        this._passwordFieldLogin = this._logInForm.locator("#signinPassword");
     }
     async open(pageUrl: string) {
         await this.page.goto(pageUrl);
@@ -55,6 +65,21 @@ export class HomePage extends BasePage {
     }
     async clickCloseButton() {
         await this._closeButton.click();
+    }
+    async clickLogInButton(): Promise<void> {
+        await this._logInButton.click();
+    }
+    async openLogInForm(): Promise<void> {
+        await this._signInButton.click();
+        await expect(this._logInForm).toBeVisible();
+    }
+    async enterEmailLogin(email: string): Promise<void> {
+        await this._emailFieldLogin.fill(email);
+        await this._emailFieldLogin.blur();
+    }
+    async enterPasswordLogin(password: string): Promise<void> {
+        await this._passwordFieldLogin.fill(password);
+        await this._passwordFieldLogin.blur();
     }
 
     get registrationForm() {
