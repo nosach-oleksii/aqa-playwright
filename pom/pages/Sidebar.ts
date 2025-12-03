@@ -39,6 +39,7 @@ export class Sidebar extends BasePage {
     }
 
     async verifySidebarVisible(): Promise<void> {
+        await this.page.waitForTimeout(1000);
         await expect(this._garageButton).toBeVisible();
         await expect(this._fuelExpensesButton).toBeVisible();
         await expect(this._instructionsButton).toBeVisible();

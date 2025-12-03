@@ -175,8 +175,10 @@ test.describe("Sign up test", () => {
             await homePage.emailField.fill(userList.mainUser.email);
             await homePage.passwordField.fill(userList.mainUser.password);
             await homePage.repeatPasswordField.fill(userList.mainUser.password);
+            await page.waitForTimeout(1000);
             await homePage.registrationButton.click();
 
+            await page.waitForTimeout(1000);
             await expect(homePage.registrationForm).toBeHidden();
             await expect(page.locator("h1")).toHaveText("Garage");
         });
