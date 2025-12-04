@@ -2,7 +2,7 @@
   "cookies": [
     {
       "name": "YSC",
-      "value": "fB1ME8JPMzY",
+      "value": "n6WAcZRszmU",
       "domain": ".youtube.com",
       "path": "/",
       "expires": -1,
@@ -13,23 +13,11 @@
       "_crHasCrossSiteAncestor": true
     },
     {
-      "name": "__Secure-ROLLOUT_TOKEN",
-      "value": "CMX-lMn_qa353QEQ_aWl1aOikQMY_aWl1aOikQM%3D",
-      "domain": ".youtube.com",
-      "path": "/",
-      "expires": 1780346456.216162,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None",
-      "partitionKey": "https://forstudy.space",
-      "_crHasCrossSiteAncestor": true
-    },
-    {
       "name": "VISITOR_INFO1_LIVE",
-      "value": "skKiyGpBigc",
+      "value": "QKoqi8j4Li0",
       "domain": ".youtube.com",
       "path": "/",
-      "expires": 1780346456.216213,
+      "expires": 1780433889.347043,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None",
@@ -38,10 +26,22 @@
     },
     {
       "name": "VISITOR_PRIVACY_METADATA",
-      "value": "CgJGUhIhEh0SGwsMDg8QERITFBUWFxgZGhscHR4fICEiIyQlJiBh",
+      "value": "CgJGUhIhEh0SGwsMDg8QERITFBUWFxgZGhscHR4fICEiIyQlJiA6",
       "domain": ".youtube.com",
       "path": "/",
-      "expires": 1780346456.216233,
+      "expires": 1780433889.34706,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://forstudy.space",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "__Secure-ROLLOUT_TOKEN",
+      "value": "CMDWud_ikbrTDRD-lNSw6aSRAxj-lNSw6aSRAw%3D%3D",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1780433889.347077,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None",
@@ -50,10 +50,10 @@
     },
     {
       "name": "sid",
-      "value": "s%3Ah0SEwMYqqF50HxtsL39fk_fXJtqYA240.lpOLWrYGkTWwqczJEVZyT4x2%2BKgGj3eIDGbnvnIwO5Y",
+      "value": "s%3AhnQ4-0jwztJ3b2PbxCnfMWt2QC0_qQ1I.%2BDuxASj22nY%2BzXzjsrSwunaah4h0K2isjjFagU62rgE",
       "domain": ".forstudy.space",
       "path": "/",
-      "expires": 1764880857.353968,
+      "expires": 1764968290.468571,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -65,7 +65,7 @@
       "localStorage": [
         {
           "name": "ytidb::LAST_RESULT_ENTRY_KEY",
-          "value": "{\"data\":{\"hasSucceededOnce\":true},\"expiration\":1767386456435,\"creation\":1764794456435}"
+          "value": "{\"data\":{\"hasSucceededOnce\":true},\"expiration\":1767473889569,\"creation\":1764881889569}"
         }
       ]
     }
